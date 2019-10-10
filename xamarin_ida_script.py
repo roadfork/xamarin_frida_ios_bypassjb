@@ -26,6 +26,8 @@ for function, text in searchItems.iteritems():
     for s in stringList:
         if (str(function) == 'mono_jit_compile_method_with_opt') and (str(text) in str(s)):
             match = True
+        if (str(function) == 'mono_class_init_internal') and (str(text) in str(s)):
+            match = True
         elif str(text) == str(s):
             match = True
         if match:
